@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.footer__nav {
+
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+    align-items: center;
+    gap: 2rem;
+
+    &--link:link,
+    &--link:visited {
+        font-size: 1.4rem;
+        font-family: $font-display;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        transition: $transition-md;
+    }
+
+    &--link:hover,
+    &--link:active {
+        background-color: rgba($color-white , .05);
+        transform: translateY(-.4rem);
+    }
+}

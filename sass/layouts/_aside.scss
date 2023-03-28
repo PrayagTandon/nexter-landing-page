@@ -1,0 +1,25 @@
+@use "../abstracts/" as *; 
+
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+
+    @include respond-to('lg') {
+       grid-row: 1 / 2;
+       grid-column: col-start 7 / full-end;
+       justify-content: flex-end;
+       background-color: $color-secondary;
+       position: relative;
+       z-index: 20;
+    }
+
+    @include respond-to('md-2') {
+        position: relative;
+        z-index: 20;
+        background-color: transparent;
+    }
+}

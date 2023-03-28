@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    align-items: start;
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: $color-primary;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        margin-top: -.4rem;
+    }
+}

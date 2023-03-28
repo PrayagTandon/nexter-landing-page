@@ -1,0 +1,69 @@
+@use "../abstracts/" as *;
+
+%heading {
+    font-family: $font-display;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    color: $color-grey-light-1;
+    line-height: 1;
+
+    @include respond-to('md-1') {
+        font-size: 4rem;
+    }
+
+    @include respond-to('sm') {
+        margin-bottom: 2rem;
+    }
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+     @include respond-to('md-1') {
+        font-size: 3.2rem;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $color-primary;
+}
+
+.heading-4 {
+   @extend %heading;
+
+    font-size: 1.9rem;
+    align-self: center;
+
+   &--dark {
+    color: $color-grey-dark-1;
+   }
+
+   &--light {
+    text-transform: capitalize;
+    color: $color-grey-light-1;
+   }
+}
+
+.copyright {
+    font-size: 1.2rem;
+    color: $color-grey-light-2;
+    margin: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+
+    span {
+        text-align: center;
+    }
+}

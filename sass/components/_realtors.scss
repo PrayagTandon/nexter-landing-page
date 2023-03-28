@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.realtors{
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        column-gap: 2rem;
+        row-gap: 5vh;
+        align-items: center;
+
+        @include respond-to('md-2') {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+        @include respond-to('md-1') {
+            grid-template-columns: min-content max-content;
+        }
+    }
+
+    &__img {
+        width: 7rem;
+        border-radius: 50%;
+    }
+
+    &__sold {
+        text-transform: uppercase;
+        color: $color-grey-light-2;
+        margin-top: -3px;
+    }
+
+    &__details {
+        @include respond-to('md-2') {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+        @include respond-to('md-1') {
+            margin-right: 0;
+        }
+    }
+}
